@@ -1,9 +1,4 @@
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<!-- Piwik -->
-<script type="text/javascript" async="" defer="" src="//analytics.cloudhipsters.com/piwik.js"></script>
-
+{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 <script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(["setDomains", ["*.justrocketscience.com"]]);
@@ -17,7 +12,7 @@
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-
+{{- end }}
 
 {{- /*  theme-toggle is enabled  */}}
 {{- if (not .Site.Params.disableThemeToggle) }}
