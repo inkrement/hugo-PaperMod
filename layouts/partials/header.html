@@ -1,4 +1,4 @@
-{{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
+{{- if not .Site.IsServer }}
 <script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(["setDomains", ["*.justrocketscience.com"]]);
